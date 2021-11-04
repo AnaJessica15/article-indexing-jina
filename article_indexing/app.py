@@ -2,6 +2,10 @@ __version__ = '0.1.0'
 
 import os
 import sys
+import numpy as np
+
+from dotenv import load_dotenv
+load_dotenv()
 
 from jina.flow import Flow
 
@@ -23,9 +27,9 @@ def index():
     f = Flow.load_config('flows/index.yml')
 
     with f:
-        data_path = os.path.join(os.path.dirname(__file__), os.environ.get('JINA_DATA_PATH',"./data/Article_dataset.csv"))
+        data_path = os.path.join(os.path.dirname(__file__), os.environ.get('JINA_DATA_PATH', None))
         if data_path:
-            f.index_lines(filepath=data_path, batch_size=16, read_mode='r', size=num_docs)
+            f.index_lines(np.fromstring(filepath=data_path, batch_size=16, read_mode='r', size=num_docs,dtype=str))
         else:
             f.index_lines(lines=['abc', 'cde', 'efg'], batch_size=16, read_mode='r', size=num_docs)
 
