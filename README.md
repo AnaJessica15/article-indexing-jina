@@ -1,4 +1,4 @@
-# jina-proj
+# Artice indexing wit Jina AI
 
 Article Indexing:
 
