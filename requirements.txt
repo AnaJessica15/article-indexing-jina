@@ -1,3 +1,5 @@
-streamlit>=0.65
-streamlit-jina
-streamlit-embedcode
+jina
+pandas
+numpy
+torch
+transformers==4.12.3
