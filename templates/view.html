@@ -664,7 +664,9 @@ input[type=text]{
   <div class="w3-container">
           {% for d in data %}
           <div class="w3-panel w3-card">
+           
                     <a href="{{(d.article_link |safe)}}">{{(d.article_link |safe)}}</a>
+                    <br>
                   </div>
         {% endfor %}
       </div>
