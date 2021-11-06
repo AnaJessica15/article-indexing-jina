@@ -16,6 +16,9 @@
 
 <!--FONT AWESOME-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <style>
@@ -646,7 +649,7 @@ input[type=text]{
 <tr>
 <td>
 <section>
-<em>SUMMARY :</em>
+<em>TOP FIVE LINKS :</em>
 <h1 class="title ml9">
 <span class="text-wrapper">
 <!-- <span class="letters">Compact & Consice Info on the Go</span> -->
@@ -657,11 +660,16 @@ input[type=text]{
 
 
 <h5 class="sub-title">
-  {{summary}}  
+  {% if data %}
+  <div class="w3-container">
+          {% for d in data %}
+          <div class="w3-panel w3-card">
+                    <a href="{{(d.article_link |safe)}}">{{(d.article_link |safe)}}</a>
+                  </div>
+        {% endfor %}
+      </div>
+  {% endif %}
 </h5>
-
-
-
 
 
 </section>

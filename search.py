@@ -59,7 +59,7 @@ def search_results(flow, query):
 
     data = [
             {
-                "article heading :" :m.text,
+                "article_heading :" :m.text,
                 "article_link" : m.tags['article_link']
             } for m in matches[:5]
         ]
