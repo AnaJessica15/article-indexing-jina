@@ -1,8 +1,6 @@
 flask
 transformers==4.9.1
-torch
 newspaper3k
 gunicorn
 sentencepiece
-bert-extractive-summarizer
-spacy
+

@@ -1,12 +1,12 @@
 '''
 Created on : 10-10-2021
 
-Created by : Ashwin Kumar, Ana Jessica, Ajay Kannan, Haris Murugan
-    
+Created by : Ashwin Kumar, Ana Jessica
+
 '''
 
 from flask import Flask,render_template,request
-from summarizer import Summarizer,TransformerSummarizer
+from transformers import pipeline
 import os
 from newspaper import Article
 
@@ -39,9 +39,11 @@ def summary():
 
     ARTICLE = article.text
 
-    model = TransformerSummarizer(transformer_type="XLNet",transformer_model_key="xlnet-base-cased")
+    summarizer = pipeline("summarization")
 
-    summary = ''.join(model(ARTICLE, min_length= int(sum_len)))
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+    summary = summarizer(ARTICLE, max_length=200, min_length= int(sum_len), do_sample=False)
 
     return render_template('view.html',summary = summary)
 
