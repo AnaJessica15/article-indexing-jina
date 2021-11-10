@@ -73,6 +73,7 @@ https://huggingface.co/t5-base
 |sentencepiece|
 |Selenium|
 |BeautifulSoup|
+|torch|
 
 ## Running
 
@@ -84,14 +85,13 @@ To test the application run the following commands on your terminal:
 ```
 pip install -r requirements.txt
 ```
+
 ```
 python app.py
 ```
 
-![epitome1](https://user-images.githubusercontent.com/82106569/141131137-747badd0-51c4-4bd4-b528-a23608bbf955.jpeg)
+![s7](https://user-images.githubusercontent.com/82106569/141140456-5b0b3117-5146-4f31-846f-94976d4c2525.png)
 
-![ss3](https://user-images.githubusercontent.com/82106569/141131226-8d4a34e7-41ff-483d-b399-65ad2801cc3a.png)
-
-![s5](https://user-images.githubusercontent.com/82106569/141138781-4b63200f-c9b5-4ee3-9164-0c8a445bb8e0.png)
+![s6](https://user-images.githubusercontent.com/82106569/141140551-a5fc449c-7d41-4c8f-8155-0ec734f866cc.png)
 
 
