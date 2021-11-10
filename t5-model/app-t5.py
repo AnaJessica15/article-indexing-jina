@@ -43,7 +43,7 @@ def summary():
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
-    summary = summarizer(ARTICLE, max_length=200, min_length= int(sum_len), do_sample=False)
+    summary = summarizer(ARTICLE, max_length=130, min_length= int(sum_len), do_sample=False)
 
     return render_template('view.html',summary = summary)
 
