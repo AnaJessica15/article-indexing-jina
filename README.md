@@ -1,4 +1,5 @@
 # Artice Indexing and Text Summarization with Jina AI
+Legit info in a nutshell !
 
 - Give a keyword and the summary length, and the headlines of the articles are searched based on that keyword and the top 5 article links are brought up by Jina AI neural search.
 
