@@ -20,7 +20,11 @@ def search():
 
     data = search_results(flow, query)
 
-    # url =
+    i = 0 
+
+    for i in data:
+
+        url = data[0].get('article_link')
 
     article = Article(url)
 
@@ -33,8 +37,8 @@ def search():
     summarizer = pipeline("summarization")
 
     os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
-    summary = summarizer(ARTICLE, max_length=130, min_length= int(sum_len), do_sample=False)
+    
+    summary = summarizer(ARTICLE,max_length=130, min_length=int(sum_len), do_sample=False)
 
     return render_template('view.html', data = data,summary = summary)
 

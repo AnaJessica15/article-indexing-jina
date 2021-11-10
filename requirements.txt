@@ -4,3 +4,4 @@ numpy
 transformers==4.12.3
 newspaper3k
 sentencepiece
+torch
