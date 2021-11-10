@@ -1,5 +1,8 @@
 from flask import Flask, render_template, request
 from search import indexing,search_results,prep_docs
+from transformers import pipeline
+import os
+from newspaper import Article
 
 app  = Flask(__name__)
 
@@ -12,8 +15,28 @@ def index():
 @app.route("/summary", methods=["POST"])
 def search():
     query = request.values.get("keyword")
+
+    sum_len  = request.values.get("sum_len")
+
     data = search_results(flow, query)
-    return render_template('view.html', data = data)
+
+    # url =
+
+    article = Article(url)
+
+    article.download()
+
+    article.parse()
+
+    ARTICLE = article.text
+
+    summarizer = pipeline("summarization")
+
+    os.environ["TOKENIZERS_PARALLELISM"] = "false"
+
+    summary = summarizer(ARTICLE, max_length=200, min_length= int(sum_len), do_sample=False)
+
+    return render_template('view.html', data = data,summary = summary)
 
     
 if __name__ == "__main__":
