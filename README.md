@@ -54,6 +54,8 @@ https://huggingface.co/transformers/model_doc/xlnet.html
 
 https://pypi.org/project/newspaper3k/
 
+https://huggingface.co/sshleifer/distilbart-cnn-12-6
+
 https://huggingface.co/t5-base
 
 ## Technology Stack
@@ -78,9 +80,14 @@ To test the application run the following commands on your terminal:
 
 **Running the application locally:**
 
+
 ```
 pip install -r requirements.txt
 ```
 ```
 python app.py
 ```
+
+![epitome1](https://user-images.githubusercontent.com/82106569/141131137-747badd0-51c4-4bd4-b528-a23608bbf955.jpeg)
+
+![ss3](https://user-images.githubusercontent.com/82106569/141131226-8d4a34e7-41ff-483d-b399-65ad2801cc3a.png)
