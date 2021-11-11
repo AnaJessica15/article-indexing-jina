@@ -7,7 +7,7 @@ Legit info in a nutshell !
 
 - Application: Top 5 articles and an extractive summary is generated for the respective keyword given by the user.
 
-- Custom Dataset, scrapped using BeautifulSoup and JinaAI: Article_dataset - Sheet1.csv
+- Custom Dataset, scrapped using BeautifulSoup and Selenium: Article_dataset - Sheet1.csv
 
 Article Topics:
 
